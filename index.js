@@ -22,7 +22,7 @@ const validateInputs=()=>{
       return
   }
 
-   const value = userInput.value
+   const value = userInput.value.trim()
 
    let letters = /^[A-Za-z]+$/;
 
