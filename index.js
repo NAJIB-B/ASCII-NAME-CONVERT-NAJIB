@@ -5,11 +5,15 @@ const answer = document.querySelector(".answer");
 
 let answerValue = ''
 const convert =(value)=>{
+   
+   console.log(answer.innerHTML, "from najib")
    for(let i =0; i < value.length; i++){
-      answerValue += `${value[i]}--0${value[i].charCodeAt(0).toString(2)}`
-  
+     
+       const html = `<p>${value[i]}--0${value[i].charCodeAt(0).toString(2)}</p>`
+
+       answer.insertAdjacentHTML("beforeend", html)
    }
-   answer.innerHTML = answerValue
+
 }
 
 const validateInputs=()=>{
@@ -27,6 +31,10 @@ const validateInputs=()=>{
       alert("please  input only letters")
     return 
    }
+   
+
+  
+   answerValue = ''
    
   convert(value)
 }
