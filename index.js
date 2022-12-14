@@ -6,7 +6,8 @@ const answer = document.querySelector(".answer");
 let answerValue = ''
 const convert =(value)=>{
    for(let i =0; i < value.length; i++){
-      answerValue += `0${value[i].charCodeAt(0).toString(2)},`
+      answerValue += `${value[i]}--0${value[i].charCodeAt(0).toString(2)}`
+  
    }
    answer.innerHTML = answerValue
 }
@@ -18,7 +19,14 @@ const validateInputs=()=>{
   }
 
    const value = userInput.value
-  
+
+   let letters = /^[A-Za-z]+$/;
+
+   if(!value.match(letters))
+   {
+      alert("please  input only letters")
+    return 
+   }
    
   convert(value)
 }
