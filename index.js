@@ -24,13 +24,7 @@ const validateInputs=()=>{
 
    const value = userInput.value.replace(/\s/g,"")
 
-   let letters = /^[A-Za-z]+$/;
-
-   if(!value.match(letters))
-   {
-      alert("please  input only letters")
-    return 
-   }
+   
    
 
   
