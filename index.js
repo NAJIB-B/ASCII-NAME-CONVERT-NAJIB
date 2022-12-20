@@ -35,6 +35,7 @@ const validateInputs=()=>{
 
   
    answerValue = ''
+    answer.innerHTML =""
    
   convert(value)
 }
