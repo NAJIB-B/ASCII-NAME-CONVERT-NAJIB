@@ -9,7 +9,7 @@ const convert =(value)=>{
    console.log(answer.innerHTML, "from najib")
    for(let i =0; i < value.length; i++){
      
-       const html = `<p>${value[i]}--0${value[i].charCodeAt(0).toString(2)}</p>`
+       const html = `<p>${value[i]}--${value[i].charCodeAt(0).toString(2)}</p>`
 
        answer.insertAdjacentHTML("beforeend", html)
    }
